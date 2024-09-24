@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(165, 149, 175);
+    display: grid;
+    place-items: center; 
+
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(6, 6rem); 
+    gap: 2rem; 
+    place-items: center;
+
+  }
+  
+  .dice {
+    width: 6rem;
+    height: 6rem;
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+  
+  section {
+    border-radius: 9px;
+    background-color: black;
+    width: 1rem;
+    height: 1rem;
+  }
+  
+
+ .dice section:nth-child(1) { grid-area: side-1; }
+ .dice section:nth-child(2) { grid-area: side-2; }
+ .dice section:nth-child(3) { grid-area: side-3; }
+ .dice section:nth-child(4) { grid-area: side-4; }
+ .dice section:nth-child(5) { grid-area: side-5; }
+ .dice section:nth-child(6) { grid-area: side-6; }
+
+.dice.dot-1 {
+    grid-template-areas:
+    ". . ."
+    ". side-1 ."
+    ". . .";
+}
+
+.dice.dot-2 {
+    grid-template-areas:
+    "side-1 . ."
+    ". . ."
+    ". . side-2";
+}
+
+.dice.dot-3 {
+    grid-template-areas:
+    "side-1 . ."
+    ". side-2 ."
+    ". . side-3";
+}
+
+.dice.dot-4 {
+    grid-template-areas:
+    "side-1 . side-2"
+    ". . ."
+    "side-3 . side-4";
+}
+
+.dice.dot-5 {
+    grid-template-areas:
+    "side-1 . side-2"
+    ". side-3 ."
+    "side-4 . side-5";
+}
+
+.dice.dot-6 {
+    grid-template-areas:
+    "side-1 . side-2"
+    "side-3 . side-4"
+    "side-5 . side-6";
+}
